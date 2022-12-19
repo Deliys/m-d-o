@@ -1,4 +1,4 @@
-double my_pow (double c, unsingned int multiplier) {
+double my_pow (double c, int multiplier) {
     if (multiplier > 0)
        for (int i = 1; i < multiplier; i++)
            c *= c;
@@ -8,4 +8,10 @@ double my_pow (double c, unsingned int multiplier) {
            c *= c;
     }
     return c;
-} 
+}
+
+double my_pow (double c, unsingned int multiplier) {
+	if (multiplier == 1)
+		return c;
+	return my_pow(c, multiplier) * c;
+}
